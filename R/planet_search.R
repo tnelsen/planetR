@@ -13,10 +13,11 @@
 
 ####
 #### Code from https://www.lentilcurtain.com/posts/accessing-planet-labs-data-api-from-r/
+#### CANNOT CONNECT TO THIS CITATION
 ####
 
-library(httr)
-library(jsonlite)
+#library(httr)
+#library(jsonlite)
 
 planet_search <- function(bbox ,
                           date_end = as.Date('2018-07-01'),
@@ -110,23 +111,8 @@ planet_search <- function(bbox ,
     }
 
 
-  response_doy <- as.numeric(
-    format(
-      as.Date.character(
-        str_split_fixed(
-          resDFid$id,
-          pattern = "_",n = 2)[,1],
-        format = "%Y%m%d"),
-      format = "%j")
-  )
-
-  response_doy <- (response_doy > start_doy & response_doy < end_doy)
-
-  resDFid_doy <- data.frame(resDFid[response_doy,])
-
   print(paste(nrow(resDFid),"images ... between", date_start, "and", date_end))
-  print(paste(nrow(resDFid_doy),"images ... that meet all criteria"))
 
-  return(resDFid_doy)
+  return(resDFid)
 }
 

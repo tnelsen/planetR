@@ -8,8 +8,8 @@
 #' @examples
 #' planet_activate()
 
-library(httr)
-library(jsonlite)
+#library(httr)
+#library(jsonlite)
 
 planet_activate = function(i, item_name = "PSOrthoTile")
 {
