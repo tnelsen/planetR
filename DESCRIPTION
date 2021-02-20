@@ -15,5 +15,8 @@ LazyData: true
 Depends: R (>= 4.0.0)
 Imports:
     httr (>= 1.4.0),
-    jsonlite (>= 1.7.0)
+    jsonlite (>= 1.7.0),
+    here (>= 1.0.1),
+    raster (>= 3.1-5),
+    stringr (>= 1.4.0)
     
